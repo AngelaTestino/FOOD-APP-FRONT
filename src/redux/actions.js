@@ -21,7 +21,7 @@ export const getAllRecipes = (recipes) => (dispatch) => {
     }
   }
 
-  return axios("http://localhost:3001/recipes").then(({ data }) => {
+  return axios("/recipes").then(({ data }) => {
     dispatch({ type: GET_ALL_RECIPES, payload: data });
     dispatch({ type: ERROR, payload: false });
   });
@@ -29,7 +29,7 @@ export const getAllRecipes = (recipes) => (dispatch) => {
 
 export const createRecipe = (form) => (dispatch) => {
   return axios
-    .post("http://localhost:3001/recipes", form)
+    .post("/recipes", form)
     .then(({ data }) => dispatch({ type: CREATE_RECIPE, payload: data }));
 };
 
@@ -48,13 +48,13 @@ export const recetaCache = (data) => {
 };
 
 export const recipeID = (data) => (dispatch) => {
-  return axios(`http://localhost:3001/recipes/${data}`).then(({ data }) =>
+  return axios(`/recipes/${data}`).then(({ data }) =>
     dispatch({ type: RECIPE_ID, payload: data })
   );
 };
 
 export const diets = () => (dispatch) => {
-  return axios("http://localhost:3001/diets").then(({ data }) =>
+  return axios("/diets").then(({ data }) =>
     dispatch({ type: GET_DIETS, payload: data })
   );
 };
