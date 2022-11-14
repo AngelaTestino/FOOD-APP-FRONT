@@ -1,0 +1,508 @@
+.containerDetail{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  height:600px;
+  background: linear-gradient(to right, #FA8D8B, #FEACAD, #FA8D8B);
+  margin: auto;
+  }
+
+.divTitleDetail{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 6rem;
+    width: 50%;
+   
+  }
+  .divTitleDetail span{
+    height: 40%;
+    width: 80%;
+    display: flex;
+    position: relative;
+    text-align: center;
+    line-height: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .icon-scroll{
+    width: 40px;
+    height: 70px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .divScroll{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+  }
+  .icon-scroll, .icon-scroll::before{
+      transform:translateX(-50%);
+      position: absolute;
+      left: 50%; 
+  }
+  .icon-scroll::before{
+    content: "";
+    margin-left: -4px;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    top:15px;
+    border-radius: 50%;
+    animation: 1.5s scroll cubic-bezier(0.65,-0.55,0.25,1.5) infinite ;
+  }
+
+
+  .decoTitleDetail{
+    background:#fcd2d2;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -30px;
+    left: -10px;
+  
+  }
+
+  .titleQuestion{
+    color:rgb(75, 72, 72);
+    font-size: 2rem;
+    z-index: 2;
+  }
+  .overlayDetail{
+      padding:10px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+  background-color: rgba(0,0,0,0.15);
+  text-align: center;
+  }
+  .overlapping{
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   
+    
+  }
+  
+  .left{
+  width: 60%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom:80px ;
+  margin-top: 80px;
+  z-index: 3;
+  
+  }
+  
+  .right{
+      width: 60%;
+      min-height: 300px;
+      background-color:beige;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+
+      margin-top: -70px;
+      margin-left: -290px;
+      font-family:  Andale Mono, monospace; 
+  }
+  .foodTitleDetail{
+    color:rgb(75, 72, 72);
+    font-size: 2rem;
+    
+  }
+  .foodTitleDetail::first-letter{
+    text-transform: capitalize;
+  }
+
+  .wave-animation {
+      position: relative;
+      width: 100%;
+      height: 143px;
+      background: linear-gradient(to right, #FA8D8B, #FEACAD, #FA8D8B);
+      background-size: cover;
+      background-attachment: fixed;
+      
+    }
+    .wave-animation .wave {
+      position: absolute;
+      width: 100%;
+      height: 143px;
+      top:0;
+      left:0;
+      background-image: url('https://vitalflow.com.ar/img/anim-onda.png');
+      animation: anim 10s linear infinite;
+      
+    }
+    .wave-animation .wave:before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 143px;
+      top:0;
+      left:0;
+      background-image: url('https://vitalflow.com.ar/img/anim-onda.png');
+      opacity: 0.4;
+      animation: anim-rev 10s linear infinite;
+      
+    }
+    .wave-animation .wave:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 143px;
+      top:0;
+      left:0;
+      background-image: url('https://vitalflow.com.ar/img/anim-onda.png');
+      opacity: 0.6;
+      animation-delay: -5s;
+      animation: anim 20s linear infinite;
+      
+    }
+ 
+    .preparation{
+      height: fit-content;
+      margin-top: 2.5rem;
+      margin-bottom: 4rem;
+      display: flex;
+      flex-direction: row;
+  
+    }
+  .column1{
+    height: fit-content;
+    width: 30%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+    padding-top: 3rem;
+  }
+  .column1 div span h3{
+    color: #F44847;
+    margin-bottom: 1rem ;
+    
+  }
+  .column1 div{
+    width: 55%;
+    
+  }
+  .column1 div svg path{
+    fill: #F44847;
+  }
+  .column1 div svg {
+    margin-bottom: 2rem;
+    width: 64px;
+    height: 64px;
+  }
+
+  .column1 div span{
+    text-align: center;
+  }
+  .column1 div span p{
+    color:rgb(75, 72, 72);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: justify;
+
+  }
+
+  .column3 div span h3{
+    color: #F44847;
+    margin-bottom: 1rem ;
+  }
+  .column3 div{
+    width: 55%;
+    
+  }
+  .column3 div svg{
+    margin-bottom: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+  .column3 div svg path{
+    fill: #F44847;
+  }
+  .column3 div span p{
+    color:rgb(75, 72, 72);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: justify;
+
+  }
+  /* .column1 div img{
+    width: 300px;
+    height: 100px;
+
+  } */
+  .column2{
+    height: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    flex-direction: column;
+    padding-top: 8rem;
+
+  }
+  .column3{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+   
+    justify-content: flex-start;
+    gap: 4rem;
+    padding-top: 3rem;
+
+  
+    /* background-color: green; */
+  }
+  .column2TitleRecipe{
+    width: 100%;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    
+    position: relative;
+  }
+ 
+  .column2TitleRecipe span {
+    color:rgb(75, 72, 72);
+    font-size: 1.5rem;
+    z-index: 2;
+  }
+  .column2TitleRecipe span h2::first-letter{
+    text-transform: capitalize;
+  }
+
+  .divPlate{
+    
+    display: flex;
+    width: 400px;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+
+  }
+  
+  .divPlate img{
+    height: 400px;
+    width: 400px;
+    
+    
+  }
+  .divPlate div{
+  position: absolute;
+  left: 95px;
+  top: 55px;
+  width: 250px;
+  height: 250px;
+ 
+  }
+  .divPlate div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid rgba(0,0,0,0.15);
+  }
+
+@media  screen and (max-width: 800px) {
+  .animationArrow{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   
+  }
+  .animationArrow .arrowSpan{
+   
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+    animation: arrow 2s linear infinite;
+    margin: -3px;
+
+
+
+  }
+  .animationArrow .arrowSpan:nth-child(2){
+    animation-delay:-0.2s;
+  }
+  .animationArrow .arrowSpan:nth-child(3){
+    animation-delay: -0.4s;
+  }
+  .overlapping{
+    display: none;
+  }
+  .divTitleDetail{
+   
+    width: 90%;
+    
+   
+  }
+  .divTitleDetail span h2{
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .divTitleDetail span{
+    width: 100%;
+   
+  }
+.icon-scroll{
+   display: none;
+  }
+  .divScroll{
+display: none;
+
+}
+
+ 
+.preparation{
+  
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+.column1{
+height: 100%;
+width: 100%;
+flex-direction: column;
+display: flex;
+align-items: center;
+justify-content: center;
+justify-content: space-around;
+gap: 2.5rem;
+}
+.column2{
+  width: 100%;
+  padding-top: 3rem;
+}
+.column3{
+  width: 100%;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.column2TitleRecipe span{
+display: none;
+}
+.divPlate{
+  width: 80%;
+}
+.divPlate img{
+  height: 100%;
+  width: 100%;
+  
+  
+}
+.divPlate div{
+position: absolute;
+left: 1.8rem;
+top: 3rem;
+width: 90%;
+height: 90%;
+
+}
+.divPlate div img{
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 4px solid rgba(0,0,0,0.15);
+}
+
+.column1 div{
+  width: 80%;
+}
+.column3 div{
+  width: 80%;
+}
+.column1 div span p{
+  font-size: 1.2rem;
+}
+.column3 div span p{
+  font-size: 1.2rem;
+
+}
+.column3 div span h3{
+  font-size: 1.5rem;
+}
+.column1 div span h3{
+  font-size: 1.5rem;
+}
+}
+
+  @keyframes anim {
+    0%
+    {
+      background-position: 0;
+    }
+    100%
+    {
+      background-position: 1360px;
+    }
+  }
+  @keyframes anim-rev {
+    0%
+    {
+      background-position: 1360;
+    }
+    100%
+    {
+      background-position: 0px;
+    }
+  }
+
+  @keyframes scroll {
+    0%{
+      opacity: 0;
+      transform: translateY(0) scale(0.5);
+
+    }
+    10%{
+      opacity: 1;
+      transform: scale(1);
+
+    }
+    100%{
+      opacity: 0;
+      transform: translateY(30px) scale(0.5);
+    }
+  }
+
+@keyframes arrow {
+  0%{
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  
+  }
+  
+}

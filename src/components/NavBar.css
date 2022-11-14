@@ -1,0 +1,271 @@
+.containNav{
+    display:flex;
+    position: sticky;
+    align-items: center;
+    background: linear-gradient(to right, #FA8D8B, #FEACAD, #FA8D8B);
+    /* box-shadow: 0px 1px 35px 0px rgb(32 53 90 / 30%); */
+    transition: ".4s ease-in-out";
+    height: 15vh;
+    width: 100%;
+    /* z-index: 4; */
+    top: 0;
+    left:0;
+    right: 0;
+    width:100%;
+    color:beige;
+    z-index: 5;
+  
+    
+}
+
+ul{
+    display: flex;
+    gap:2rem;
+    margin-right: 2rem;
+}
+.liNav{
+    display: inline;
+    list-style: none;
+    cursor: pointer;
+  
+    font-weight: 500;
+
+}
+.divLogo{
+min-width:15%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin:0;
+
+height: 100%;
+
+}
+.logoNav{
+    height: 4rem;
+    width: 8rem;
+    
+}
+.logoNav:hover{
+    border-radius: 10px;
+}
+.linkNav__desk{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+  
+    
+}
+
+.btnNewRecipe .btnRecipe{
+    display: flex;
+    align-items: center;
+    position:relative;
+    outline: none;
+    font-weight: 500;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border:2px solid #F44847;
+    background:transparent;
+    color: beige;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+   overflow: hidden;
+   
+}
+
+.btnRecipe:hover{
+    /* box-shadow: 0 5px 30px rgba(0,0,0,.2); */
+    color:#F44847;
+}
+.btnRecipe:hover .svgCreate path {
+    fill:#F44847;
+}
+.btnNewRecipe .btnRecipe:after{
+    position:absolute;
+    content: '';
+    left:0;
+    top:0;
+    height: 490%;
+    width:140%;
+    transition: all .5s ease-in-out;
+    background: #F44847;
+    transform: translate(-9%,-25%) rotate(45deg);
+    
+    
+}
+.btnNewRecipe:hover .btnRecipe:after{
+    transform: translate(-98%,-25%) rotate(45deg);
+}
+.spanRecipe{
+    position: relative;
+    z-index:1;
+    
+ 
+}
+.btnRecipe .svgCreate {
+    margin-right:10px;
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    
+}
+.btnRecipe .svgCreate path{
+fill: beige;
+}
+
+.snippets_desk{
+   width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    justify-content: flex-end;
+    
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .containNav{
+        justify-content: space-between;
+        height: 15vh;
+        padding: 0 2rem 0 2rem;
+        align-items: center;
+        
+    }
+    .btnRecipe .svgCreate {
+        margin-right: 0px;
+        width: 40px;
+        height: 40px;
+
+    }
+.btnRecipe .svgCreate path{
+fill: #F44847;
+}
+    
+    .spanRecipe{
+        display: none;
+    }
+    ul{
+        margin: 0;
+    }
+ 
+    .divLogo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logoNav{
+        height: 4rem;
+        width: 8rem;
+    
+
+    
+    }
+    .snippets_desk *:nth-child(2){
+        display: none;
+    }
+    
+    
+    /* .liNav{
+    font-weight: 500;
+    margin: 50px;
+    display: block;
+    } */
+    .snippets{
+        
+        margin-left: 3px;
+        position: absolute;
+        background-color: rgba(0,0,0,0.8);
+        top:20vh;
+        right: 0;
+        height: 400px;
+        width:400px;
+        border-radius:  0  0  0 100%;
+        z-index:2;
+    }
+
+  
+    .linkNav:hover{
+        color: #fff;
+     
+    }
+  
+    .bars__menu{
+        min-width:30px ;
+        min-height: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+      
+    }
+    .bars__menu span{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background:rgb(75, 72, 72);
+        margin-top: 6px;
+        transform-origin: 0px 100%;
+        transition: linear 200ms;
+       
+        
+    }
+    .activeline1__bars-menu{
+        transform: rotate(45deg) translate(2px, -4px);
+       
+    }
+    .activeline3__bars-menu{
+        transform: rotate(-45deg) translate(1px, 7px);
+       
+      
+    }
+    .activeline2__bars-menu{
+        opacity: 0;
+       
+    }
+    
+ .menu__active{
+    display: flex;
+    flex-direction: column-reverse;
+    background: beige;
+    position: sticky;
+    height: 200px;
+
+ }
+  .menu__active .divLogo{
+    display: none;
+ }
+ .menu__active .bars__menu {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+ }
+ 
+
+ .btnNewRecipe .btnRecipe{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color:beige;
+    border: 0;
+
+ }
+
+ .btnNewRecipe .btnRecipe:after{
+ display: none;
+    
+
+    
+}
+}
+
+

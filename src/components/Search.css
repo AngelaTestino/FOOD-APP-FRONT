@@ -1,0 +1,107 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+.box{
+    max-width: 120px;
+    width: 100%;
+    transition: all 0.3s ease;
+    display:block;
+   
+}
+.box:has(input[type="checkbox"]:checked) { 
+  max-width: 350px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.box .search-box{
+
+    display: flex;
+    height: 45px;
+    max-width: 45px;
+  flex-direction: row-reverse;
+    transition: all 0.3s ease;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+    border-radius: 50%;
+}
+.search-box input{
+    
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background:beige ;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 1rem;
+}
+.search-box .icon{
+    position: absolute;
+    cursor: pointer;
+    top:0;
+    width:45px;
+    background:#F44847;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    border-radius:50% ;
+    font-size: 20px;
+}
+  .search-box .icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: rotate(-20deg);
+    
+    
+  } 
+  #check:checked ~ .search-box {
+    max-width: 380px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+  } 
+  #check:checked ~ .search-box .icon {
+    background:#F44847;
+    border-radius: 0px 5px 5px 0;
+    width: 60px;
+  }
+  #check:checked ~ .search-box input{
+    border-radius: 5px;
+    padding-right:80px ;
+    
+  }
+  #check:checked ~ .search-box .icon svg path{
+    fill: beige;
+   
+  }
+  #check{
+    display: none;
+  }
+  .search-box .icon svg path{
+    fill:beige;
+   
+  }
+@media screen and (max-width: 800px) { 
+  .searchInputResponsive{
+    width: 70%;
+    height: 40px;
+
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background: beige;
+    outline: none;
+    padding: 0 12px 0 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+    text-align: center;
+    font-size: 1rem;
+  }
+  .searchInputResponsive::placeholder{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+ 
+    
+    
+
+
+}

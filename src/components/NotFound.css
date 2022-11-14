@@ -1,0 +1,26 @@
+.containerError{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    margin-top: 0rem;
+}
+
+.titleFound{
+   margin-top: 1rem;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+   
+
+
+}
+.advice{
+    color: #fff;
+    text-align: center;
+  
+
+}

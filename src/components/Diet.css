@@ -1,0 +1,69 @@
+
+:root{
+--first-color:#0cd4ee;
+--second-color:#dc27fc;
+--third-color:#e70f62;
+}
+
+.dietMain{
+width:55%;
+height:252px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: justify;
+background-color:rgba(105, 95, 95, 0.534);
+backdrop-filter: blur(17px);
+border-radius:8px solid ;
+overflow: hidden;
+box-shadow:9px 9px 18px -9px #272424;
+margin-top:50px;
+}
+@media screen and (max-width: 600px) {
+    .dietMain{
+        width:300px;
+        height:400px;
+        margin-top: 40px;
+    }
+    .box{
+        padding: 10px;
+    }
+}
+
+.dietMain::before{
+    content: "";
+    position: absolute;
+    width:20%;
+    height:800px;
+    align-self: center;
+    background: linear-gradient(var(--first-color), var(--second-color));
+    filter:drop-shadow(0 0 50px var(--third-color));
+    animation: animate 10s ease-in-out infinite;
+   
+    
+
+}
+@keyframes animate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.dietMain::after{
+content: "";
+background-color: rgb(180, 177, 177);
+position:absolute;
+inset:5px;
+
+}
+
+.box {
+    padding: 30px;
+    position: relative;
+    z-index: 5;
+    font-family:  Andale Mono, monospace;
+    color:  rgb(75, 72, 72);
+}

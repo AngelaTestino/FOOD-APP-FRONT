@@ -1,0 +1,75 @@
+.containHome{
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height: 80vh;
+
+
+
+}
+.welcome{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width:50vw;
+background-color: rgb(204, 133, 147);
+padding: 50px;
+}
+.explain{
+    color:rgb(240, 240, 228);
+    font-family: "Lucida Handwriting";
+}
+.description{
+    color: rgb(240, 240, 228);
+    font-size: large;
+    font-weight: 600;
+    font-family: Andale Mono, monospace;
+    line-height: 40px;
+    margin:10px 90px;
+    min-width: 160px;
+}
+
+.plato{
+    background-image: url('../plato1.png');
+    background-repeat: no-repeat;
+    width:50vw;
+    background-size: cover;
+    position: relative;
+
+
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+@media screen and (max-width: 600px) {
+    .containHome{
+        flex-wrap: wrap;
+        width: 100vw;
+       
+    
+    }
+    .welcome{
+        width: 100vw;
+        height: 400px;
+        padding: 0px;
+    }
+    .plato{
+        width: 100vw;
+        height: 400px;
+    }
+    .explain{
+        margin:20px;
+    }
+    .description{
+        margin: 30px;
+        font-size: medium;
+        line-height: 30px;
+        
+    }
+}
+    

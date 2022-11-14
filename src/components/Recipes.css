@@ -1,0 +1,177 @@
+
+.mainRecipes{
+   /*background-image: url("https://media.istockphoto.com/photos/terrazzo-floor-seamless-pattern-background-picture-id1305315453?b=1&k=20&m=1305315453&s=170667a&w=0&h=k3LgvZ7pTdaTMJWWCuPhJbE9NC2xuR4u35l3khkWhYk=");*/
+  /* background-image: linear-gradient(to right, rgb(169, 161, 179), rgb(137, 172, 177)); */
+  background: linear-gradient(to right, #FA8D8B, #FEACAD, #FA8D8B);
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5rem;
+}
+.errorContainer{
+   /*background-image: url("https://media.istockphoto.com/photos/terrazzo-floor-seamless-pattern-background-picture-id1305315453?b=1&k=20&m=1305315453&s=170667a&w=0&h=k3LgvZ7pTdaTMJWWCuPhJbE9NC2xuR4u35l3khkWhYk=");*/
+   background: linear-gradient(to right, #FA8D8B, #FEACAD, #FA8D8B);
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5rem;
+    }
+.containerRecipes{
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top:50px;
+    padding-bottom: 50px;
+    min-height: 60vh;
+    width: 75%;
+    margin: auto;
+   
+
+}
+
+    
+
+
+.labelFilter{
+    font-size: 1em;
+    font-weight: 500;
+    margin-right: 30px;
+    width: 20px;
+    
+    color: #fff;
+  
+}
+.containerInputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 1.5rem;
+    gap: 2rem;
+
+
+}
+.selectRecipes{
+    height: 35px;
+    width: 200px;
+    font-size: 14px;
+    font-weight: 500;
+    /* color: #141518; */
+    color: beige;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-align: center;
+    outline:none;
+    cursor:pointer;
+    border:transparent;
+    background: #FA8D8B;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}
+.selectRecipes:hover{
+    /* background-color: rgb(83, 81, 81); */
+    /* color:#fff; */
+    border: transparent;
+    
+}
+select option:checked,
+select option:hover {
+    color: #141518;
+}
+.divPaginado{
+width:100%;
+display: flex;
+gap: 2rem;
+align-items: center;
+justify-content: center;
+height: 10%;
+margin-bottom: 3rem;
+}
+.boxBtn .btnPaginado{
+    width:140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    outline: none;
+    font-weight: 500;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border:2px solid #F44847;
+    background:transparent;
+    color: beige;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+.boxBtn .btnPaginado:after{
+    position:absolute;
+    content: '';
+    left:0;
+    top:0;
+    height: 390%;
+    width:120%;
+    transition: all .5s ease-in-out;
+    background: #F44847;
+    transform: translate(-9%,-25%) rotate(45deg);
+    
+    
+}
+.boxBtn:hover .btnPaginado:after{
+    transform: translate(-120%,-25%) rotate(45deg);
+}
+.btnPaginado span{
+    position: relative;
+    z-index:1;
+}
+.btnPaginado:hover{
+
+    color:#F44847;
+}
+
+.btnPaginado:disabled{
+
+    cursor: not-allowed;
+ 
+}
+
+
+@media screen and (max-width: 800px) {
+    .mainRecipes{
+        padding-top: 5rem;
+    }
+    .errorContainer{
+        padding-top: 5rem;
+    }
+    .containerRecipes{
+     
+        padding-left:0px;
+        padding-right:0px;
+        justify-content: center;
+        
+    }
+    .containerInputs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 1.5rem;
+        gap: 1.5rem;
+        width: 70%;
+       
+    }
+  .selectRecipes{
+    margin: 0;
+    width: 100%;
+  }
+}
