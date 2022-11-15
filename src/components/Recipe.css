@@ -95,6 +95,14 @@ font-weight: 500;
 @media screen and  (max-width: 800px){
 
    .containerCard{
-    width: 80%;
+    width: 70%;
+    margin-left: 0;
+    margin-right: 0;
+   }
+   .divImg{
+    width: 100%;
+   }
+   .divText{
+    width: 100%;
    }
 }

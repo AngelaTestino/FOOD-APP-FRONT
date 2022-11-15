@@ -308,8 +308,9 @@ align-items: center;
         display: block;
         color: beige;
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-bottom: 1.5rem;
+        margin-top: 2.5rem;
     }
     
     .inputForm{
@@ -321,18 +322,17 @@ align-items: center;
     .image{
         display:none;
     }
-    .mainCreateRecipe{
-    width: 100%;
-    min-height:100vh;
-    overflow: hidden;
-    }
+
+
    .formulario{
     min-width: 100%;
-    min-height: 100vh;
+
    display: flex;   
    margin: 0;  
-    position: relative;
+   justify-content: flex-start;
+    
     flex-direction: column;
+    background: linear-gradient(to right, #FA8D8B, #FEACAD, #FA8D8B);
     
    
     }
@@ -340,19 +340,20 @@ align-items: center;
  
     .boxCreate .btnCreate{
         padding:10px 30px;
-        height: 2rem;
+        height: 2.5rem;
     }
     .boxCreate:hover .btnCreate:after{
-        transform: translate(-120%,-25%) rotate(45deg);
+        transform: translate(-9%,-25%) rotate(45deg);
     }
     .form{
         gap: 1.5rem;
-        position: absolute;
+    
         width:90%;
-        top: 6rem;
-        margin: 2rem auto 2rem auto;
+        top: 3rem;
+        margin: 2rem auto auto auto;
         background-color: transparent;
         box-shadow: none;
+        margin-bottom: 2rem;
     }
    
    .eachContainer{
@@ -372,9 +373,20 @@ align-items: center;
         height: 20px;
         font-size: 10px;
         margin-top: 10px;
+    
     }
+   
   
     .dietInstructions{
         height: 50px;
     }
+    .boxCreate .btnCreate{
+        background: #F44847;
+        color: beige;
+    }
+    
+    .boxCreate .btnCreate:after{
+       display: none;
+      }
+  
    }

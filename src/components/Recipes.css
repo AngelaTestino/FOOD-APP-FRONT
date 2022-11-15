@@ -154,10 +154,12 @@ margin-bottom: 3rem;
         padding-top: 5rem;
     }
     .containerRecipes{
-     
+        margin-left: 0;
+        margin-right:0 ;
         padding-left:0px;
         padding-right:0px;
         justify-content: center;
+        width: 100%;
         
     }
     .containerInputs{
@@ -174,4 +176,21 @@ margin-bottom: 3rem;
     margin: 0;
     width: 100%;
   }
+  .boxBtn .btnPaginado{
+    width:120px;
+    background: #F44847;
+    color: beige;
+}
+.boxBtn .btnPaginado:after{
+    display: none;
+}
+    .boxBtn:hover .btnPaginado:after{
+        transform: translate(-130%,-25%) rotate(45deg);
+    }
+    .divPaginado{
+      
+        gap: 1.5rem;}
+
+       
+      
 }
