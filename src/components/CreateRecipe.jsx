@@ -217,6 +217,7 @@ export function CreateRecipe() {
                 multiple={true}
                 value={form.diets}
                 onChange={handleSelect}
+                size={10}
               >
                 {/* {options.map((option) =>
                   option.value ? (
