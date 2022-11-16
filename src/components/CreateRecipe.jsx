@@ -214,10 +214,8 @@ export function CreateRecipe() {
               <select
                 name="diets"
                 className="selectForm"
-                multiple={true}
                 value={form.diets}
                 onChange={handleSelect}
-                size="10"
               >
                 {/* {options.map((option) =>
                   option.value ? (
@@ -244,15 +242,15 @@ export function CreateRecipe() {
                 <option
                   value=""
                   disabled={true}
-                  style={{
-                    color: "#909294",
-                    fontSize: "1rem",
-                    fontWeight: "500",
-                    paddingTop: "0.5rem",
-                    paddingBottom: "0.5rem",
-                  }}
+                  selected={true}
+                  hidden
+                  // style={{
+                  //   color: "#909294",
+                  //   fontSize: "1rem",
+                  //   fontWeight: "500",
+                  // }}
                 >
-                  Diets --ctrl to select more--
+                  Diets
                 </option>
                 {options.map((option) => (
                   <option key={option.value} value={option.value}>

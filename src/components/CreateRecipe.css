@@ -116,6 +116,7 @@ align-items: center;
         margin-right: 10px;
         outline:none;
         resize: none;
+        color:rgb(75, 72, 72);
     }
     .inputForm:hover{
         border-bottom:2px solid #F44847;
@@ -135,7 +136,7 @@ align-items: center;
         font-size: 1rem;
         font-weight: 500;
         padding: 0.5rem;
-        
+        color:rgb(75, 72, 72);
         outline:none;
         border-top: 2px solid #f4474783;
         border-right:2px solid #f4474783;
@@ -251,24 +252,31 @@ align-items: center;
         border-bottom:2px solid #f4474783;
         border-radius: 6px;
         outline: none;
-        height: 5rem;
-        padding: 0 0.5rem 0.5rem 0.5rem;
+        color: #909294;
+        padding: 0.5rem;
         background-color: #fff;
         width: 100%;
+        min-height: 2.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+       
     }
+    .selectForm option:checked {
+       
+        color: #FA8E8C;
+        font-weight: 500;
+      }
     
     .selectForm:hover{
         border-bottom:2px solid #F44847;
         
     }
-    .selectForm::placeholder{
-    font-size: 1rem;
-    font-weight: 500;
-    color: #909294;
-    }
+   
+
     ::selection{
         background: #FC9E9E;
     }
+
     .logoCreateResponsive{
         display: none;
     }
