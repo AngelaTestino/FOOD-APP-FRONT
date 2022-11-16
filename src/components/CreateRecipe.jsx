@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import logoNav from "../logoFOOD.png";
 import NavBar from "./NavBar";
 const options = [
-  { value: "", text: "Diets  --ctrl to select more--" },
+  // { value: "", text: "Diets  --ctrl to select more--" },
   { value: "1", text: "gluten free" },
   { value: "2", text: "ketogenic" },
   { value: "3", text: "lacto ovo vegetarian" },
@@ -218,7 +218,7 @@ export function CreateRecipe() {
                 value={form.diets}
                 onChange={handleSelect}
               >
-                {options.map((option) =>
+                {/* {options.map((option) =>
                   option.value ? (
                     <option key={option.value} value={option.value}>
                       {option.text}
@@ -228,11 +228,36 @@ export function CreateRecipe() {
                       key={option.value}
                       value={option.value}
                       disabled={true}
+                      style={{
+                        color: "#909294",
+                        fontSize: "1rem",
+                        fontWeight: "500",
+                        paddingTop: "0.5rem",
+                        paddingBottom: "0.5rem",
+                      }}
                     >
                       {option.text}
                     </option>
                   )
-                )}
+                )} */}
+                <option
+                  value=""
+                  disabled={true}
+                  style={{
+                    color: "#909294",
+                    fontSize: "1rem",
+                    fontWeight: "500",
+                    paddingTop: "0.5rem",
+                    paddingBottom: "0.5rem",
+                  }}
+                >
+                  Diets --ctrl to select more--
+                </option>
+                {options.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.text}
+                  </option>
+                ))}
               </select>
             </div>
 

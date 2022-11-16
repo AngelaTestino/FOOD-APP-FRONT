@@ -3,7 +3,7 @@ background: linear-gradient(to right, #FA8D8B, #FEACAD, #FA8D8B);
 display: flex;
 justify-content: center;
 min-height:100vh;
-color:#767676;
+
 width:100%;
 position: relative;
 align-items: center;
@@ -41,21 +41,16 @@ align-items: center;
     width: 250px;
     height: 250px;
     color: beige;
-    /* text-shadow: 0 0 7px beige, 0 0 4px beige, 0 0 6px #FA8D8B; */
     text-shadow: 0 0 4px beige, 0 0 6px #FA8D8B;
     font-size: 2.2rem;
     font-weight: 500;
-
     display: flex;
     align-items: center;
-   
- 
 }
 .overlay-first{
     display: flex;
-align-items: center;
+    align-items: center;
     flex-direction: column;
-
     position:absolute;
     z-index: 2;
     background-image: linear-gradient(to right,
@@ -109,13 +104,10 @@ align-items: center;
     .inputForm{
         min-height: 2.5rem;
         width: 100%;
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: 500;
         padding: 0.5rem;
         background-color: transparent;
-        /* color: rgb(75, 72, 72); */
-        /* box-shadow: 0 0 15px rgb(0 0 0 / 80%); */
-        /* border-bottom: 2px solid #ff315a; */
         border-top: 2px solid #f4474783;
         border-right:2px solid #f4474783;
         border-left:2px solid #f4474783;
@@ -123,7 +115,6 @@ align-items: center;
         border-radius: 6px;
         margin-right: 10px;
         outline:none;
-       
         resize: none;
     }
     .inputForm:hover{
@@ -131,16 +122,17 @@ align-items: center;
         outline: none;
     }
     .inputForm::placeholder{
-        color: #767676;
         font-size: 1rem;
+        font-weight: 500;
+       color: #909294;
         height: 30px;
         text-align: left;
         
     }
     .inputInstruction{
-        height: 4rem;
+        height: 5rem;
         width: 100%;
-        font-size:1em;
+        font-size: 1rem;
         font-weight: 500;
         padding: 0.5rem;
         
@@ -153,11 +145,21 @@ align-items: center;
         resize: none;
         background-color: beige;
     }
+    .inputInstruction::placeholder{
+        color:#909294;
+        font-size: 1rem;
+        font-weight: 500;
+    }
     .inputInstruction:hover{
      
         border-bottom:2px solid #F44847;
         outline: none;
     }
+    .inputInstruction::-webkit-input-placeholder {
+        color:#909294;
+        font-size: 1rem;
+        font-weight: 500;
+        }
     .boxCreate{
         width: 70%;
     }
@@ -203,39 +205,17 @@ align-items: center;
         z-index:1;
     }
     .btnCreate:hover{
-        /* box-shadow: 0 5px 30px rgba(0,0,0,.2); */
         color:#F44847;
     }
-    /* .btnCreate{
-        
-        font-weight: 500;
-        height: 3rem;
-        width:70%;
-        padding: 10px;
-        font-size: 1rem;
-        border-radius: 5px;
-        background-color:#F44847;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        border: transparent;
-       
-    } */
-    /* .btnCreate:hover{
-        background-color: #465563;
-        
-    } */
+
     .danger{
         height: 2.5rem;
         width: 100%;
-        font-size: 1em;
+ 
+        font-size: 1rem;
         font-weight: 500;
-        /* color: rgb(75, 72, 72); */
         background-color: transparent;
         padding: 0.5rem;
-        
-       
        outline: none;
        border-top: 2px solid #f4474783;
        border-right:2px solid #f4474783;
@@ -243,10 +223,14 @@ align-items: center;
        border-bottom:2px solid #f4474783;
        border-radius: 6px;
     }
+    .danger::placeholder{
+        color:#909294;
+        font-size: 1rem;
+        font-weight: 500;
+    }
     .msgError{
         font-size: 1rem;
         display:block;
-        
         font-weight:500;
         color: rgb(216, 19, 19);
     }
@@ -259,7 +243,6 @@ align-items: center;
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 3rem;
-        /* color:rgb(75, 72, 72); */
     }
     .selectForm{
         border-top: 2px solid #f4474783;
@@ -268,7 +251,7 @@ align-items: center;
         border-bottom:2px solid #f4474783;
         border-radius: 6px;
         outline: none;
-        min-height: 4rem;
+        height: 5rem;
         padding: 0 0.5rem 0.5rem 0.5rem;
         background-color: beige;
         width: 100%;
@@ -279,8 +262,9 @@ align-items: center;
         
     }
     .selectForm::placeholder{
-        color: #767676;
-        font-size: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909294;
     }
     ::selection{
         background: #FC9E9E;
@@ -322,32 +306,23 @@ align-items: center;
     .image{
         display:none;
     }
-
+    .divInput{
+        height: fit-content;
+    }
 
    .formulario{
     min-width: 100%;
-
-   display: flex;   
-   margin: 0;  
-   justify-content: flex-start;
-    
+    display: flex;   
+    margin: 0;  
+    justify-content: flex-start; 
     flex-direction: column;
     background: linear-gradient(to right, #FA8D8B, #FEACAD, #FA8D8B);
-    
-   
     }
  
  
-    .boxCreate .btnCreate{
-        padding:10px 30px;
-        height: 2.5rem;
-    }
-    .boxCreate:hover .btnCreate:after{
-        transform: translate(-9%,-25%) rotate(45deg);
-    }
+  
     .form{
         gap: 1.5rem;
-    
         width:90%;
         top: 3rem;
         margin: 2rem auto auto auto;
@@ -369,6 +344,11 @@ align-items: center;
         height: 140px;
         margin-bottom: 20px;
     }
+ 
+  
+    .dietInstructions{
+        height: 50px;
+    }
     .btnCreate{
         height: 20px;
         font-size: 10px;
@@ -376,13 +356,14 @@ align-items: center;
     
     }
    
-  
-    .dietInstructions{
-        height: 50px;
+    .boxCreate:hover .btnCreate:after{
+        transform: translate(-9%,-25%) rotate(45deg);
     }
     .boxCreate .btnCreate{
         background: #F44847;
         color: beige;
+        padding:10px 30px;
+        height: 2.5rem;
     }
     
     .boxCreate .btnCreate:after{
