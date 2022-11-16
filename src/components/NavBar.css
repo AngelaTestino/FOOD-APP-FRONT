@@ -12,7 +12,7 @@
     left:0;
     right: 0;
     width:100%;
-    color:beige;
+    color:#fff;
     z-index: 5;
   
     
@@ -71,7 +71,7 @@ height: 100%;
     cursor: pointer;
     border:2px solid #F44847;
     background:transparent;
-    color: beige;
+    color: #fff;
     box-shadow: 0 5px 10px rgba(0,0,0,0.25);
    overflow: hidden;
    
@@ -115,7 +115,7 @@ height: 100%;
     
 }
 .btnRecipe .svgCreate path{
-fill: beige;
+fill: #fff;
 }
 
 .snippets_desk{
@@ -234,7 +234,7 @@ fill: #F44847;
  .menu__active{
     display: flex;
     flex-direction: column-reverse;
-    background: beige;
+    background: #fff;
     position: sticky;
     height: 200px;
 
@@ -255,7 +255,7 @@ fill: #F44847;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color:beige;
+    background-color:#fff;
     border: 0;
 
  }

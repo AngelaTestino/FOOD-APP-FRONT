@@ -8,7 +8,7 @@
     margin: 27px;
     box-shadow: 9px 9px 18px -9px #272424;
     position: relative;
-    background: beige;
+    background: #fff;
     flex-direction: column;
 
 }
@@ -82,7 +82,7 @@ height: 100%;
 display: flex;
 flex-direction: column;
 align-items: baseline;
-color:beige;
+color:#fff;
 text-align: center;
 align-items: center;
 gap: 1rem;

@@ -48,7 +48,7 @@ export default function NavBar() {
         style={
           color
             ? {
-                background: "beige",
+                background: "#fff",
                 boxShadow: " 0px 1px 35px 0px rgb(32 53 90 / 30%)",
                 transition: ".8s ease-in-out",
               }

@@ -65,7 +65,7 @@
     font-size: 14px;
     font-weight: 500;
     /* color: #141518; */
-    color: beige;
+    color: #fff;
     border-radius: 5px;
     margin-right: 10px;
     text-align: center;
@@ -110,7 +110,7 @@ margin-bottom: 3rem;
     cursor: pointer;
     border:2px solid #F44847;
     background:transparent;
-    color: beige;
+    color: #fff;
     box-shadow: 0 5px 10px rgba(0,0,0,0.25);
     overflow: hidden;
 }
@@ -179,7 +179,7 @@ margin-bottom: 3rem;
   .boxBtn .btnPaginado{
     width:120px;
     background: #F44847;
-    color: beige;
+    color: #fff;
 }
 .boxBtn .btnPaginado:after{
     display: none;

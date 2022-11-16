@@ -40,8 +40,8 @@ align-items: center;
 .createBanner{
     width: 250px;
     height: 250px;
-    color: beige;
-    text-shadow: 0 0 4px beige, 0 0 6px #FA8D8B;
+    color: #fff;
+    text-shadow: 0 0 4px #fff, 0 0 6px #FA8D8B;
     font-size: 2.2rem;
     font-weight: 500;
     display: flex;
@@ -86,7 +86,7 @@ align-items: center;
     margin: 10%;
     border-radius: 10px;
     justify-content: center;
-    background-color:beige;
+    background-color:#fff;
     align-items: center;
     box-shadow:9px 9px 18px -9px #272424;
     display:flex;
@@ -143,7 +143,7 @@ align-items: center;
         border-bottom:2px solid #f4474783;
         border-radius: 6px;
         resize: none;
-        background-color: beige;
+        background-color: #fff;
     }
     .inputInstruction::placeholder{
         color:#909294;
@@ -179,7 +179,7 @@ align-items: center;
         cursor: pointer;
         border:2px solid #F44847;
         background:transparent;
-        color: beige;
+        color: #fff;
         box-shadow: 0 5px 10px rgba(0,0,0,0.25);
         overflow: hidden;
         
@@ -253,7 +253,7 @@ align-items: center;
         outline: none;
         height: 5rem;
         padding: 0 0.5rem 0.5rem 0.5rem;
-        background-color: beige;
+        background-color: #fff;
         width: 100%;
     }
     
@@ -290,7 +290,7 @@ align-items: center;
     }
     .titleCreateResponsive{
         display: block;
-        color: beige;
+        color: #fff;
         font-weight: 600;
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
@@ -298,10 +298,10 @@ align-items: center;
     }
     
     .inputForm{
-        background: beige;
+        background: #fff;
     }
     .danger{
-        background: beige;
+        background: #fff;
     }
     .image{
         display:none;
@@ -361,7 +361,7 @@ align-items: center;
     }
     .boxCreate .btnCreate{
         background: #F44847;
-        color: beige;
+        color: #fff;
         padding:10px 30px;
         height: 2.5rem;
     }
