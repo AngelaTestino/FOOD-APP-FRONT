@@ -419,15 +419,15 @@ display: none;
 }
 .divPlate div{
 position: absolute;
-left: 1.8rem;
-top: 3rem;
-width: 90%;
-height: 90%;
+left: 20%;
+top: 10%;
+width: 70%;
+height: 70%;
 
 }
 .divPlate div img{
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   border: 4px solid rgba(0,0,0,0.15);
 }
