@@ -38,11 +38,11 @@ align-items: center;
     margin: 1.2rem 0 0 2rem;
 }
 .createBanner{
-    width: 250px;
+    width: 70%;
     height: 250px;
     color: #fff;
     text-shadow: 0 0 4px #fff, 0 0 6px #FA8D8B;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -76,14 +76,16 @@ align-items: center;
     align-items: center;
     margin-left: 30%;
     height: fit-content;
-    
+    flex-direction: column;
+   
     }
     
     
     .form{
-    padding-top: 2.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
     width:60%;
-    margin: 10%;
+    margin: 5% 10% 10% 10%;
     border-radius: 10px;
     justify-content: center;
     background-color:#fff;
@@ -93,9 +95,7 @@ align-items: center;
     flex-direction: column;
     gap:2.5rem;
     height: fit-content;
-    
-    
-    
+
     }
     
     .divInput{
@@ -190,8 +190,9 @@ align-items: center;
         content: '';
         left:0;
         top:0;
-        height: 1040%;
-        width:130%;
+        height: 1070%;
+        width:160%;
+    
         transition: all .5s ease-in-out;
         background: #F44847;
         transform: translate(-9%,-25%) rotate(45deg);
@@ -279,12 +280,25 @@ align-items: center;
 
     .logoCreateResponsive{
         display: none;
+       
     }
     .titleCreateResponsive{
         display: none;
+       
+    }
+    .titleCreate{
+        color:#fff;
+        font-weight: 600;
+        font-size: 2rem;
+        align-self: flex-start;
+        margin-top: 4rem;
+        margin-left: 4rem;
     }
   
 @media screen and (max-width: 900px) {
+    .titleCreate{
+        display: none;
+    }
     .logoCreateResponsive{
         display: block;
         top: 1rem;
@@ -378,4 +392,16 @@ align-items: center;
        display: none;
       }
   
+   }
+   @media screen and (min-width: 1800px) {
+    .boxCreate .btnCreate{
+        background: #F44847;
+        color: #fff;
+        padding:10px 30px;
+        height: 2.5rem;
+    }
+    
+    .boxCreate .btnCreate:after{
+       display: none;
+      }
    }

@@ -139,17 +139,22 @@ export function CreateRecipe() {
               </NavLink>
             </div>
 
-            <div className="createBanner">Create your favorite recipe</div>
+            <div className="createBanner">
+              "A recipe has no soul. You, as the cook, must bring the soul to
+              the recipe"
+              <br />
+              --Thomas Keller--
+            </div>
           </div>
         </div>
         <div className="formulario">
           <NavLink to="home/recipes">
             <img className="logoCreateResponsive" src={logoNav} alt="logoNav" />
           </NavLink>
-
+          <span className="titleCreate">Create a new recipe...</span>
           <form className="form" onSubmit={handleSubmit}>
             {/* <label className="labelForm">Name</label> */}
-            <span className="titleCreateResponsive">Create your recipes</span>
+            <span className="titleCreateResponsive">Create a new recipe</span>
             <div className="divInput">
               <input
                 className={!errorTitle ? "inputForm" : "danger"}
