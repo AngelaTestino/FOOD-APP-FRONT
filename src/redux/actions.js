@@ -7,6 +7,7 @@ export const RECETA_CACHE = "RECETA_CACHE";
 export const RECIPE_ID = "RECIPE_ID";
 export const ERROR = "ERROR";
 export const GET_DIETS = "GET_DIETS";
+export const SEARCH = "SEARCH";
 
 export const getAllRecipes = (recipes) => (dispatch) => {
   if (recipes) {
@@ -57,4 +58,8 @@ export const diets = () => (dispatch) => {
   return axios("/diets").then(({ data }) =>
     dispatch({ type: GET_DIETS, payload: data })
   );
+};
+
+export const search = (data) => (dispatch) => {
+  return dispatch({ type: SEARCH, payload: data });
 };

@@ -14,14 +14,13 @@ export default function Recipes() {
   let recipes = useSelector((state) => state.recipes);
   let cacheRecipes = useSelector((state) => state.recetaCache);
   let error = useSelector((state) => state.error);
+  let search = useSelector((state) => state.search);
 
   const [btnPrev, setBtnPrev] = useState(true);
   const [btnNext, setBtnNext] = useState(false);
   const [selectedDiet, setSelectedDiet] = useState("");
   const [selectedScore, setSelectedScore] = useState("");
   const [selectedName, setSelectedName] = useState("");
-  const [radio, setRadio] = useState("");
-  const [radioScore, setRadioScore] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
@@ -121,7 +120,9 @@ export default function Recipes() {
     }
     setCurrentPage((currentPage) => currentPage + 9);
   }
-
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [search]);
   useEffect(() => {
     getAllRecipes()(dispatch);
   }, [dispatch]);

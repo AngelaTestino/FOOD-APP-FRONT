@@ -1,7 +1,7 @@
 import "./Search.css";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
-import { getAllRecipes } from "../redux/actions";
+import { getAllRecipes, search } from "../redux/actions";
 
 export default function Search() {
   const [name, setName] = useState("");
@@ -19,6 +19,7 @@ export default function Search() {
       );
     });
     getAllRecipes(recipes)(dispatch);
+    search(recipes)(dispatch);
   }
   useEffect(() => {
     function handleWindowResize() {

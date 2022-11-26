@@ -21,25 +21,25 @@ export default function NavBar() {
   };
   window.addEventListener("scroll", changeColor);
 
-  // * responnsive nav
-  var line1__bars;
-  var line2__bars;
-  var line3__bars;
-  var container__menu;
+  // // * responnsive nav
+  // var line1__bars;
+  // var line2__bars;
+  // var line3__bars;
+  // var container__menu;
 
-  const animateBars = () => {
-    line1__bars.classList.toggle("activeline1__bars-menu");
-    line2__bars.classList.toggle("activeline2__bars-menu");
-    line3__bars.classList.toggle("activeline3__bars-menu");
-    container__menu.classList.toggle("menu__active");
-  };
+  // const animateBars = () => {
+  //   line1__bars.classList.toggle("activeline1__bars-menu");
+  //   line2__bars.classList.toggle("activeline2__bars-menu");
+  //   line3__bars.classList.toggle("activeline3__bars-menu");
+  //   container__menu.classList.toggle("menu__active");
+  // };
 
-  useEffect(() => {
-    line1__bars = document.querySelector(".line1__bars-menu");
-    line2__bars = document.querySelector(".line2__bars-menu");
-    line3__bars = document.querySelector(".line3__bars-menu");
-    container__menu = document.querySelector(".containNav");
-  });
+  // useEffect(() => {
+  //   line1__bars = document.querySelector(".line1__bars-menu");
+  //   line2__bars = document.querySelector(".line2__bars-menu");
+  //   line3__bars = document.querySelector(".line3__bars-menu");
+  //   container__menu = document.querySelector(".containNav");
+  // });
 
   return (
     <>
