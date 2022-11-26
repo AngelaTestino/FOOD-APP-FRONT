@@ -244,17 +244,7 @@ export function CreateRecipe() {
                     </option>
                   )
                 )} */}
-                <option
-                  value=""
-                  disabled={true}
-                  selected={true}
-                  hidden
-                  // style={{
-                  //   color: "#909294",
-                  //   fontSize: "1rem",
-                  //   fontWeight: "500",
-                  // }}
-                >
+                <option value="" disabled={true} selected={true} hidden>
                   Diets
                 </option>
                 {options.map((option) => (

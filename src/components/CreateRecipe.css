@@ -112,8 +112,8 @@ align-items: center;
         border-right:2px solid #f4474783;
         border-left:2px solid #f4474783;
         border-bottom:2px solid #f4474783;
-        border-radius: 6px;
-        margin-right: 10px;
+        border-radius: 10px;
+      
         outline:none;
         resize: none;
         color:rgb(75, 72, 72);
@@ -142,7 +142,7 @@ align-items: center;
         border-right:2px solid #f4474783;
         border-left:2px solid #f4474783;
         border-bottom:2px solid #f4474783;
-        border-radius: 6px;
+        border-radius: 10px;
         resize: none;
         background-color: #fff;
     }
@@ -223,7 +223,7 @@ align-items: center;
        border-right:2px solid #f4474783;
        border-left:2px solid #f4474783;
        border-bottom:2px solid #f4474783;
-       border-radius: 6px;
+       border-radius: 10px;
     }
     .danger::placeholder{
         color:#909294;
@@ -251,7 +251,7 @@ align-items: center;
         border-right:2px solid #f4474783;
         border-left:2px solid #f4474783;
         border-bottom:2px solid #f4474783;
-        border-radius: 6px;
+        border-radius: 10px;
         outline: none;
         color: #909294;
         padding: 0.5rem;
