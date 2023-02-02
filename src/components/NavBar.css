@@ -98,7 +98,7 @@ height: 100%;
     
 }
 .btnNewRecipe:hover .btnRecipe:after{
-    transform: translate(-98%,-25%) rotate(45deg);
+    transform: translate(-100%,-25%) rotate(45deg);
 }
 .spanRecipe{
     position: relative;

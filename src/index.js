@@ -8,8 +8,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
 
-// axios.defaults.baseURL = "http://localhost:3001"
-axios.defaults.baseURL = "https://food-app-back-production.up.railway.app/";
+// axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL =
+  "https://food-app-back-production-d2bc.up.railway.app/";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

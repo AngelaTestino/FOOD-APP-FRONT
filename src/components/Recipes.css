@@ -95,7 +95,7 @@ height: 10%;
 margin-bottom: 3rem;
 }
 .boxBtn .btnPaginado{
-    width:140px;
+    width:200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,8 +119,8 @@ margin-bottom: 3rem;
     content: '';
     left:0;
     top:0;
-    height: 390%;
-    width:120%;
+    height: 500%;
+    width:130%;
     transition: all .5s ease-in-out;
     background: #F44847;
     transform: translate(-9%,-25%) rotate(45deg);
@@ -128,7 +128,7 @@ margin-bottom: 3rem;
     
 }
 .boxBtn:hover .btnPaginado:after{
-    transform: translate(-120%,-25%) rotate(45deg);
+    transform: translate(-120%,-10%) rotate(45deg);
 }
 .btnPaginado span{
     position: relative;

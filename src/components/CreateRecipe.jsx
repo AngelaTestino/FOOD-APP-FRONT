@@ -1,12 +1,12 @@
 import "./CreateRecipe.css";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { createRecipe } from "../redux/actions";
 import { NavLink } from "react-router-dom";
 import logoNav from "../logoFOOD.png";
-import NavBar from "./NavBar";
+import { useForm } from "react-hook-form";
+
 const options = [
-  // { value: "", text: "Diets  --ctrl to select more--" },
   { value: "1", text: "gluten free" },
   { value: "2", text: "ketogenic" },
   { value: "3", text: "lacto ovo vegetarian" },
@@ -18,110 +18,31 @@ const options = [
   { value: "9", text: "whole 30" },
   { value: "10", text: "dairy free" },
 ];
+
 export const opciones = options.slice(1);
 
-const initialState = {
-  title: "",
-  summary: "",
-  healthScore: null,
-  steps: "",
-  image: "",
-  diets: [],
-};
 // eslint-disable-next-line
 const regExTitle = /[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*/;
 // eslint-disable-next-line
 const regExImage = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
 
 export function CreateRecipe() {
-  const [form, setForm] = useState(initialState);
   const [create, setCreate] = useState("");
-  const [errorTitle, setErrorTitle] = useState("");
-  const [errorSummary, setErrorSummary] = useState("");
-  const [errorImage, setErrorImage] = useState("");
-  const [btn, setBtn] = useState(true);
 
   const dispatch = useDispatch();
+  //-----------------------------------------
+  const {
+    register,
+    reset,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
-  const handleTitle = (e) => {
-    e.preventDefault();
-    setCreate("");
-    setBtn(false);
-    if (e.target.value === "") {
-      setErrorTitle("Name is required");
-      return setForm({ ...form, title: e.target.value });
-    }
-    if (!regExTitle.test(e.target.value)) {
-      setErrorTitle("Name must contain only letters!!!");
-    } else {
-      setErrorTitle("");
-    }
-    setForm({ ...form, title: e.target.value });
-  };
-  const handleSummary = (e) => {
-    e.preventDefault();
-    setCreate("");
-    setBtn(false);
-    if (e.target.value === "") {
-      setErrorSummary("Summary is required");
-      return setForm({ ...form, summary: e.target.value });
-    }
-    setForm({ ...form, summary: e.target.value });
-    setErrorSummary("");
-  };
-  const handleImage = (e) => {
-    e.preventDefault();
-    setCreate("");
-    setBtn(false);
-
-    if (e.target.value === "") {
-      setErrorImage("");
-      return setForm({ ...form, image: e.target.value });
-    }
-    if (!regExImage.test(e.target.value)) {
-      setErrorImage("type a valid URL!!!");
-    } else {
-      setErrorImage("");
-    }
-
-    setForm({ ...form, image: e.target.value });
-  };
-
-  const handleChange = (e) => {
-    e.preventDefault();
-    setCreate("");
-    setBtn(false);
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-  const handleSelect = (e) => {
-    e.preventDefault();
-    setCreate("");
-    setBtn(false);
-    setForm({
-      ...form,
-      [e.target.name]: [...e.target.selectedOptions].map((o) => o.value),
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = (form) => {
     console.log(form);
-
-    if (
-      errorTitle === "" &&
-      errorSummary === "" &&
-      errorImage === "" &&
-      form.title !== "" &&
-      form.summary !== ""
-    ) {
-      createRecipe(form)(dispatch);
-      setCreate("The recipe was created successfully!");
-      document.getElementById("inputScore").value = null;
-      setForm(initialState);
-      setBtn(true);
-    }
-
-    setBtn(true);
+    createRecipe(form)(dispatch);
+    setCreate("The recipe was created successfully!");
+    reset();
   };
 
   useEffect(() => {
@@ -152,99 +73,100 @@ export function CreateRecipe() {
             <img className="logoCreateResponsive" src={logoNav} alt="logoNav" />
           </NavLink>
           <span className="titleCreate">Create a new recipe...</span>
-          <form className="form" onSubmit={handleSubmit}>
-            {/* <label className="labelForm">Name</label> */}
+          <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <span className="titleCreateResponsive">Create a new recipe</span>
             <div className="divInput">
               <input
-                className={!errorTitle ? "inputForm" : "danger"}
-                name="title"
                 type="text"
-                value={form.title}
-                onChange={handleTitle}
-                placeholder="Name"
-              />
-              {!errorTitle ? null : (
-                <span className="msgError">{errorTitle}</span>
-              )}
-            </div>
-
-            {/* <label className="labelForm">Summary</label> */}
-            <div className="divInput">
-              <input
-                className={!errorSummary ? "inputForm" : "danger"}
-                name="summary"
-                type="text"
-                value={form.summary}
-                onChange={handleSummary}
-                placeholder="Summary"
-              />
-              {!errorSummary ? null : (
-                <span className="msgError">{errorSummary}</span>
-              )}
-            </div>
-
-            {/* <label className="labelForm">Health Score</label> */}
-            <div className="divInput">
-              <input
-                id="inputScore"
                 className="inputForm"
-                name="healthScore"
-                type="number"
-                value={form.healthScore}
-                placeholder="HealthScore  --0-100--"
-                min={1}
-                max={100}
-                onChange={handleChange}
+                placeholder="Name"
+                {...register("title", {
+                  required: {
+                    value: true,
+                    message: "*The field name is required.",
+                  },
+                  pattern: {
+                    value: /^[A-Za-zÀ-ÖØ-öø-ÿ ]+$/,
+                    message: "*Insert a valid name.",
+                  },
+                  minLength: {
+                    value: 3,
+                    message: "*Insert at least 2 characters.",
+                  },
+                  maxLength: {
+                    value: 32,
+                    message: "*Insert at most 32 characters.",
+                  },
+                })}
               />
+
+              <span className="msgError">
+                {errors.title && errors.title.message}
+              </span>
+            </div>
+
+            <div className="divInput">
+              <input
+                className="inputForm"
+                type="number"
+                placeholder="Health Score  --0-100--"
+                {...register("healthScore", {
+                  required: {
+                    value: true,
+                    message: "*The field health score is required.",
+                  },
+                  min: {
+                    value: 0,
+                    message: "*The minimum score is 0.",
+                  },
+                  max: {
+                    value: 100,
+                    message: "*The maximum score is 100.",
+                  },
+                })}
+              />
+
+              <span className="msgError">
+                {errors.healthScore && errors.healthScore.message}
+              </span>
             </div>
 
             {/* <label className="labelForm">URL Image</label> */}
             <div className="divInput">
               <input
-                className={!errorImage ? "inputForm" : "danger"}
-                name="image"
+                className="inputForm"
                 type="text"
-                value={form.image}
-                onChange={handleImage}
                 placeholder="URL image"
+                {...register("image", {
+                  required: {
+                    value: true,
+                    message: "*The field URL image is required.",
+                  },
+                  pattern: {
+                    value:
+                      // eslint-disable-next-line no-useless-escape
+                      /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/,
+                    message: "*Insert a valid URL.",
+                  },
+                })}
               />
-              {!errorImage ? null : (
-                <span className="msgError">{errorImage}</span>
-              )}
+              <span className="msgError">
+                {errors.image && errors.image.message}
+              </span>
             </div>
 
             {/* <label className="labelForm">Type of diet</label> */}
             <div className="divInput">
               <select
-                name="diets"
                 className="selectForm"
-                value={form.diets}
-                onChange={handleSelect}
+                {...register("diets", {
+                  required: {
+                    value: true,
+                    message: "*Select an option.",
+                  },
+                })}
               >
-                {/* {options.map((option) =>
-                  option.value ? (
-                    <option key={option.value} value={option.value}>
-                      {option.text}
-                    </option>
-                  ) : (
-                    <option
-                      key={option.value}
-                      value={option.value}
-                      disabled={true}
-                      style={{
-                        color: "#909294",
-                        fontSize: "1rem",
-                        fontWeight: "500",
-                        paddingTop: "0.5rem",
-                        paddingBottom: "0.5rem",
-                      }}
-                    >
-                      {option.text}
-                    </option>
-                  )
-                )} */}
-                <option value="" disabled={true} selected={true} hidden>
+                <option value="" disabled={true} defaultValue={true} hidden>
                   Diets
                 </option>
                 {options.map((option) => (
@@ -253,25 +175,64 @@ export function CreateRecipe() {
                   </option>
                 ))}
               </select>
+              <span className="msgError">
+                {" "}
+                {errors.diets && errors.diets.message}
+              </span>
             </div>
-
-            {/* <label className="labelForm">Instructions</label> */}
             <div className="divInput">
               <textarea
                 className="inputInstruction"
-                name="steps"
-                value={form.steps}
-                onChange={handleChange}
-                placeholder="Instructions"
+                type="text"
+                placeholder="Summary"
+                {...register("summary", {
+                  required: {
+                    value: true,
+                    message: "*The field summary is required.",
+                  },
+                  minLength: {
+                    value: 10,
+                    message: "*Insert at least 10 characters.",
+                  },
+                  maxLength: {
+                    value: 100,
+                    message: "*Insert at most 100 characters.",
+                  },
+                })}
               />
+
+              <span className="msgError">
+                {errors.summary && errors.summary.message}
+              </span>
+            </div>
+            <div className="divInput">
+              <textarea
+                className="inputInstruction"
+                placeholder="Instructions"
+                {...register("steps", {
+                  required: {
+                    value: true,
+                    message: "*The field instructions is required.",
+                  },
+                  minLength: {
+                    value: 20,
+                    message: "*Insert at least 20 characters.",
+                  },
+                })}
+              />
+
+              <span className="msgError">
+                {" "}
+                {errors.steps && errors.steps.message}
+              </span>
             </div>
             <div className="boxCreate">
-              <button className="btnCreate" type="submit" disabled={btn}>
+              <button className="btnCreate" type="submit">
                 <span>Create</span>
               </button>
             </div>
             <div className="created">
-              {create && <h2 className="creado">{create}</h2>}
+              <h2 className="creado"> {create && create}</h2>
             </div>
           </form>
         </div>
