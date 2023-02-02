@@ -1,3 +1,4 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Landing.css";
 import image from "../logoFOOD.png";

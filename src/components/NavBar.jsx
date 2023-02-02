@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 // import imagen from "../menu.svg";
 import Search from "./Search.jsx";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function NavBar() {
   const [color, setColor] = useState(false);

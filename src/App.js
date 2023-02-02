@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Landing from "./components/Landing.jsx";
 import NavBar from "./components/NavBar.jsx";
 import Recipes from "./components/Recipes.jsx";
