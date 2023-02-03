@@ -262,6 +262,7 @@ align-items: center;
         font-weight: 500;
        
     }
+  
     .selectForm option:checked {
        
         color: #FA8E8C;
@@ -273,10 +274,6 @@ align-items: center;
         
     }
    
-
-    ::selection{
-        background: #FC9E9E;
-    }
 
     .logoCreateResponsive{
         display: none;

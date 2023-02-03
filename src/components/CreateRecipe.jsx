@@ -158,6 +158,7 @@ export function CreateRecipe() {
             {/* <label className="labelForm">Type of diet</label> */}
             <div className="divInput">
               <select
+                id="selectDiet"
                 className="selectForm"
                 {...register("diets", {
                   required: {
@@ -166,7 +167,7 @@ export function CreateRecipe() {
                   },
                 })}
               >
-                <option value="" disabled={true} defaultValue={true} hidden>
+                <option value="" disabled={true} selected={true}>
                   Diets
                 </option>
                 {options.map((option) => (
