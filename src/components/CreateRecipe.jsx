@@ -64,7 +64,7 @@ export function CreateRecipe() {
               "A recipe has no soul. You, as the cook, must bring the soul to
               the recipe"
               <br />
-              --Thomas Keller--
+              -Thomas Keller-
             </div>
           </div>
         </div>
