@@ -10,7 +10,7 @@ import axios from "axios";
 
 // axios.defaults.baseURL = "http://localhost:3001";
 axios.defaults.baseURL =
-  "https://food-app-back-production-d4ce.up.railway.app/";
+  "https://food-henry-back.onrender.com";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
